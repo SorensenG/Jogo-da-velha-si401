@@ -24,9 +24,14 @@ const resetButton = document.getElementById('reset');
 
 let vez;
 let fimDeJogo;
+let player1;
+let player2;
 
 function startGame(event) {
     event.preventDefault();
+
+    player1 = document.getElementById('player1').value || "Jogador 1";
+    player2 = document.getElementById('player2').value || "Jogador 2";
 
     boxes.forEach(box => {
         box.textContent = '';
@@ -39,6 +44,9 @@ function startGame(event) {
 
     vez = 0;
     fimDeJogo = false;
+
+    message.style.display = 'flex';
+    message.textContent = `Vez de ${player1} ❌`;
     boxes.forEach(box => {
         box.addEventListener('click', () => {
             if (fimDeJogo) return;
@@ -58,6 +66,8 @@ function startGame(event) {
                     message.textContent = 'Velha!';
                     message.style.display = 'flex';
                     fimDeJogo = true; // 
+                }else{
+                    message.textContent = `Vez de ${vez % 2 === 0 ? player1 : player2} ${vez % 2 === 0 ? '❌' : '⭕'}`;
                 }
             }
         });
