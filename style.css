@@ -126,7 +126,7 @@ h2.title {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 40px;
 }
 
 #message {
@@ -166,4 +166,24 @@ h2.title {
 }
 .box.not-allowed {
     background-color: grey;
+}
+@media (max-width: 480px) {
+    #Welcome {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+
+    #Welcome form {
+        width: 90%;
+        gap: 10px;
+    }
+
+    #Welcome input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    h2.title {
+        font-size: 1.6rem;
+    }
 }
