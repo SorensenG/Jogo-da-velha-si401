@@ -82,7 +82,6 @@ function reiniciarJogo() {
         box.textContent = '';
         box.classList.remove('X', 'O', 'vencedor');
     });
-    message.style.display = 'none';
 }
 
 function voltarInicio() {
