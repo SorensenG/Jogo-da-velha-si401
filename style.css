@@ -1,57 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
 
 #Welcome {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+
     color: white;
     font-size: 2rem;
+    flex-direction: row;
+    padding: 5%;
+
+}
+
+#Welcome form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+
 }
 
 #Welcome input {
+    width: 100%;
     padding: 10px;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 20px;
+
     transition: all 0.3s ease;
 }
 
 #Welcome input:focus {
     outline: none;
-    size: 10px;
-    transform: scale(1.1);
-
+    transform: scale(1.05);
 }
 
 #Welcome h1 {
-    font-size: 3rem;
-    margin-right: 100px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 7rem 0 0;
+}
+
+h2.title {
+     font-weight: 700;
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 3rem;
 }
 
 .button {
-    padding: 10px 20px;
+    width: 100%;
+
+    padding: 10px;
     border-radius: 5px;
     font-size: 1rem;
     border: 3px solid black;
     background-color: #F03A17;
-
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .button:hover {
     background-color: #a02a12;
     transform: scale(1.06);
     border: 3px solid #a02a12;
-    
+}
+
+
+#game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 10px 0 10px 0;
+}
+
+.box {
+    display: flex;
+    caret-color: transparent;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    background-color: #b881ff;
+    transform: scale(1.05);
+    border: 1px solid #5c1f99;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+#message {
+    font-size: 1.5rem;
+     font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+#reset {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+#clear{
+    margin-top: 10pxs;
+     width: 150px;
+}
+
+
+.box.X {
+    color: #c4cefa; 
+    border: 2px solid #667eea;
+    background-color: #f0f0f08c;
+}
+
+.box.O {
+    color: #8c59bd; 
+    border: 2px solid #764ba2;
+    background-color:#f0f0f08c;
+}
+
+.box.vencedor {
+    background-color: #4CAF50; 
+    color: white;
+    border: 2px solid #388E3C;
+}
+.box.not-allowed {
+    background-color: grey;
 }

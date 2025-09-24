@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5525/5525437.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da velha si401</title>
@@ -10,31 +11,37 @@
 
 <body>
     <div id="Welcome">
-        <h1>Bem vindo ao jogo</h1>
-        <form action="" onsubmit="">
+        <h2 class="title">Bem vindo ao jogo</h2>
+        <form action="" onsubmit="startGame(event)">
             <h1>Jogador 1 ❌ </h1>
-            <input type="text" id="player1" placeholder="Nome do jogador 1">
+            <input type=" text" id="player1" placeholder="Nome do jogador 1">
             <h1>Jogador 2 ⭕ </h1>
             <input type="text" id="player2" placeholder="Nome do jogador 2">
             <button class="button" id="start" type="submit">Iniciar jogo</button>
         </form>
     </div>
 
-    <div id="game" style="display: none;">
-        <div class="box box1">X</div>
-        <div class="box box2">O</div>
-        <div class="box box3">X</div>
-        <div class="box box4">O</div>
-        <div class="box box5">X</div>
-        <div class="box box6">O</div>
-        <div class="box box7">X</div>
-        <div class="box box8">O</div>
-        <div class="box box9">X</div>
+    <div id="game">
+        <div id="message" style="display: none;">ganhador ganhou!</div>
+        <div class="container">
+            <div class="box ">X</div>
+            <div class="box ">O</div>
+            <div class="box ">X</div>
+            <div class="box ">O</div>
+            <div class="box ">X</div>
+            <div class="box ">O</div>
+            <div class="box ">X</div>
+            <div class="box">O</div>
+            <div class="box">X</div>
+
+        </div>
+        <div class="buttons">
+
+            <button class="button" id="clear" onclick="reiniciarJogo()">Reiniciar Jogo</button>
+            <button class="button" id="reset" onclick="voltarInicio()">Voltar ao Inicio</button>
+        </div>
     </div>
 
-    <button id="reset" style="display: none;">Reiniciar Jogo</button>
-
-    <div id="message" style="display: none;">O ganhador ganhou!</div>
     <script src="script.js"></script>
 
 </body>
