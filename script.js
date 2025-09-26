@@ -81,6 +81,8 @@ function reiniciarJogo() {
         box.style.cursor = 'pointer';
         box.textContent = '';
         box.classList.remove('X', 'O', 'vencedor');
+        message.textContent = `Vez de ${player1} ❌`;
+
     });
 }
 
